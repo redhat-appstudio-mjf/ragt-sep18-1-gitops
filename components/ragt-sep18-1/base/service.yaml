@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: ragt-sep18-1
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ragt-sep18-1 
+  name: ragt-sep18-1
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+  selector:
+    app.kubernetes.io/instance: ragt-sep18-1 
